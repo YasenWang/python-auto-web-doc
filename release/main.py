@@ -27,8 +27,9 @@ def _cmd_main(args):
     os.system('{install_path}/hooks/post-update'.format(
         install_path=INSTALL_PATH))
     # Start Web Server
-    os.system('java -jar {install_path}/GitWebhooksServer-0.0.1-SNAPSHOT.jar &2>&1'.format(
+    os.system('java -jar {install_path}/GitWebhooksServer-0.0.1-SNAPSHOT.jar &2>&1 &'.format(
         install_path=INSTALL_PATH))
+    a = input()
 
 
 if __name__ == '__main__':
