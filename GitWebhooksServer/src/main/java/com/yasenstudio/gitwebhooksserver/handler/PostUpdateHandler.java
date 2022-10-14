@@ -15,7 +15,7 @@ public class PostUpdateHandler {
     /**
      * Handle Post Update.
      *
-     * @return
+     * @return HttpResponse
      */
     @ResponseBody
     @PostMapping("/post-update")
@@ -25,7 +25,7 @@ public class PostUpdateHandler {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
         try {
-            Process proc = Runtime.getRuntime().exec ("./hooks/post-update");
+            Process proc = Runtime.getRuntime().exec ("/home/auto-doc/hooks/post-update");
 
         } catch (IOException e) {
             e.printStackTrace();
